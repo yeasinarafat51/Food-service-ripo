@@ -6,7 +6,7 @@ const Addservice = () => {
    
     const [services, setservices] = useState([]);
     useEffect( () =>{
-        fetch('http://localhost:5000/servic')
+        fetch('https://server11.vercel.app/servic')
         .then(res =>res.json())
         .then(data => setservices(data))
     },[])
@@ -31,7 +31,7 @@ const Addservice = () => {
            
     //     }
 
-    //     fetch('http://localhost:5000/servic',{
+    //     fetch('https://server11.vercel.app/servic',{
     //         method:'POST',
     //         headers:{
     //             'content-type':'application/json'
@@ -81,8 +81,9 @@ const Addservice = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                if(data.acknowledge){
+                if(data.acknowledged){
                     alert('order placed successfully')
+                    setservices([...services, review])
                     form.reset();
                 }
             })

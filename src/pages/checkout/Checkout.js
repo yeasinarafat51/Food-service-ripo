@@ -30,7 +30,7 @@ const Checkout = () => {
             img,
         }
 
-        fetch('http://localhost:5000/orders',{
+        fetch('https://server11.vercel.app/orders',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

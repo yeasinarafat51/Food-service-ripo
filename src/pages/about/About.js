@@ -11,10 +11,10 @@ const About = () => {
          <img src={parts} alt="" className="absolute right-5 top-1/2 w-3/5 border-8 rounded-lg shadow-2xl" />
          </div>
           <div className='w-1/2'>
-              <p className=' text-2xl font-bold text-orange-600'>About Us</p>
-            <h1 className=" my-5 text-5xl font-bold">We are qualified <br/>& of expreience <br/>in this field</h1>
-            <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-            <button className="btn btn-primary">Get More Info</button>
+              <p className=' text-2xl font-bold text-orange-600'>About Service</p>
+            <h1 className=" my-5 text-5xl font-bold">Chicken Fried <br/>Chicken Masala <br/>Chicken Shawarma</h1>
+            <p className="py-6">Fried chicken, also known as Southern fried chicken, is a dish consisting of chicken pieces that have been coated with seasoned flour or batter and pan-fried, deep fried, pressure fried, or air fried.</p>
+            <button className="btn btn-primary">Deatails</button>
           </div>
         </div>
       </div>

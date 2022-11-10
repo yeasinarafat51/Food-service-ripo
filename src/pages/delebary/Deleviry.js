@@ -12,10 +12,10 @@ const Deleviry = () => {
          <img src={parts} alt="" className="absolute right-5 top-1/2 w-3/5 border-8 rounded-lg shadow-2xl" />
          </div>
           <div className='w-1/2'>
-              <p className=' text-2xl font-bold text-orange-600'>About Us</p>
-            <h1 className=" my-5 text-5xl font-bold">We are qualified <br/>& of expreience <br/>in this field</h1>
-            <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-            <button className="btn btn-primary">Get More Info</button>
+              <p className=' text-2xl font-bold text-orange-600'>Home Delevairy</p>
+            <h1 className=" my-5 text-5xl font-bold">All Division <br/>Home Services</h1>
+            <p className="py-6">Delivery is the process of transporting goods from a source location to a predefined destination.</p>
+            <button className="btn btn-primary">Orders</button>
           </div>
         </div>
       </div>

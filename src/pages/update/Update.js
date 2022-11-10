@@ -10,7 +10,7 @@ const Update = () => {
     const handleupdate = event =>{
         event.preventDefault();
         // console.log(user)
-        fetch(`http://localhost:5000/orders/${store._id}`,{
+        fetch(`https://server11.vercel.app/orders/${store._id}`,{
             method: 'PUT',
             headers:{
                 'content-type': 'application/json'
@@ -40,13 +40,15 @@ const Update = () => {
         setuser(newuser)
     }
     return (
-        <div className='mx-auto'>
-            <h2 className='orange-600'>Update Name: {store.servicename}</h2>
+        <div >
+           <div className='px-30 mx-25'>
+           <h2 className='text-orange-600'>Update Name: {store.servicename}</h2>
             <form onSubmit={handleupdate}>
             <input onChange={handletext} name='text' type="text" defaultValue={store.text} placeholder="review" className="input input-bordered " /><br/>
             <input className='btn' type="submit"  value="Eidt review"/>
             </form>
             <ToastContainer />
+           </div>
         </div>
        
     );

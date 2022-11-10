@@ -14,7 +14,7 @@ const Review = () => {
         if(!user?.email){
             return 
         }
-        fetch(`http://localhost:5000/orders?email=${user?.email}`, {
+        fetch(`https://server11.vercel.app/orders?email=${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('genius-token')}`
             }
@@ -33,7 +33,7 @@ const Review = () => {
         const proceed =window.confirm('Are cancel review');
         
         if(proceed){
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://server11.vercel.app/orders/${id}`, {
                 method:'DELETE'
             })
             .then(res => res.json())
