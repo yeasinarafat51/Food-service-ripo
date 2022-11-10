@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Update = () => {
     const store = useLoaderData();
@@ -19,7 +21,8 @@ const Update = () => {
         .then(res => res.json())
         .then(data =>{
             if(data.modifiedCount >0){
-                alert('review update')
+                // alert('review update')
+                toast("Edit success");
                 console.log(data);
                 event.target.reset()
             }
@@ -43,6 +46,7 @@ const Update = () => {
             <input onChange={handletext} name='text' type="text" defaultValue={store.text} placeholder="review" className="input input-bordered " /><br/>
             <input className='btn' type="submit"  value="Eidt review"/>
             </form>
+            <ToastContainer />
         </div>
        
     );

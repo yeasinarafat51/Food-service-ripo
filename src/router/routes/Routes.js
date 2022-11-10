@@ -4,7 +4,9 @@ import Checkout from "../../pages/checkout/Checkout";
 import Home from "../../pages/home/home/Home";
 import Addservice from "../../pages/home/services/Addservice";
 import Servic from "../../pages/home/services/Servic";
+import Servit from "../../pages/home/services/Servit";
 import Login from "../../pages/login/Login";
+import Rebot from "../../pages/review/Rebot";
 import Review from "../../pages/review/Review";
 import Blog from "../../pages/shared/blog/Blog";
 import Signup from "../../pages/signup/Signup";
@@ -25,7 +27,7 @@ const router = createBrowserRouter([
             },
             {
                 path:'/servic',
-                element:<Privetrout><Servic></Servic></Privetrout>
+                element:<Servic></Servic>
             },
             {
                 path:'/login',
@@ -56,7 +58,15 @@ const router = createBrowserRouter([
             {
                 path:'/blog',
                 element:<Blog></Blog>
-            }
+            },
+            {
+                path:'/servic',
+                element:<Servit></Servit>
+            },
+            // {
+            //     path:'/orders',
+            //     element:<Rebot></Rebot>
+            // }
         ]
 
     },

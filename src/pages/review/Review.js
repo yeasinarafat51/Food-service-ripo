@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../contexts/authprovider/Authprovider';
 import Usetitle from '../../hooks/Usetitle';
 import Reviewrow from './Reviewrow';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Review = () => {
     const {user, logout} = useContext(AuthContext)
@@ -29,6 +31,7 @@ const Review = () => {
 
     const handledelete = id =>{
         const proceed =window.confirm('Are cancel review');
+        
         if(proceed){
             fetch(`http://localhost:5000/orders/${id}`, {
                 method:'DELETE'
@@ -37,7 +40,8 @@ const Review = () => {
             .then(data => {
                 console.log(data);
                 if(data.deletedCount > 0){
-                    alert('deleted success')
+                    // alert('deleted success')
+                    toast("delete success");
                     const remaining = review.filter(odr => odr._id !== id);
                     setreview(remaining)
                     
@@ -62,6 +66,7 @@ const Review = () => {
             <h1>Delete</h1>
           </label>
         </th>
+        <th>Img</th>
         <th>Name</th>
         <th>Price</th>
         <th>Review</th>
@@ -84,6 +89,7 @@ const Review = () => {
     
   </table>
 </div>
+<ToastContainer />
         </div>
     );
 };

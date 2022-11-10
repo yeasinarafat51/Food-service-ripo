@@ -3,6 +3,8 @@ import { useLoaderData } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/authprovider/Authprovider';
 import Reviewrow from '../review/Reviewrow';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Checkout = () => {
 
@@ -16,6 +18,7 @@ const Checkout = () => {
         const names = `${form.name.value}`
         const email = user?.email || 'unregistered';
         const text = form.text.value;
+        const img = form.img.value;
 
         const review = {
             service:_id,
@@ -23,7 +26,8 @@ const Checkout = () => {
             price,
             customer:names,
             email,
-            text
+            text,
+            img,
         }
 
         fetch('http://localhost:5000/orders',{
@@ -37,7 +41,8 @@ const Checkout = () => {
         .then(data =>{
             console.log(data)
             if(data.acknowledged){
-                alert('review success')
+                // alert('review success')
+                toast("review success");
                 form.reset()
             }
         })
@@ -67,12 +72,13 @@ const Checkout = () => {
         <input name='name' type="text" placeholder="Name"  className="input input-bordered " />
         <input name='email' type="text" placeholder="email" defaultValue={user?.email} className="input input-bordered " readOnly />
         <input name='text' type="text" placeholder="review" className="input input-bordered " />
+        <input name='img' type="img" placeholder="img" className="input input-bordered " />
         </div>
         <input className='btn' type="submit"  value="Place review"/>
         </form>
        
       </div>
-     
+      <ToastContainer />
        </div>
     );
 };

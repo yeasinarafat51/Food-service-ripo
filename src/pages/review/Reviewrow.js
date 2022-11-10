@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/authprovider/Authprovider';
 
 const Reviewrow = ({order,handledelete}) => {
-    const {user} = useContext(AuthContext)
-    const { _id,price,email, customer,text,servicename} = order
+    // const {user} = useContext(AuthContext)
+    const { _id,price,email, customer,text,servicename,img} = order
 
     
     return (
@@ -19,8 +19,7 @@ const Reviewrow = ({order,handledelete}) => {
           <div className="flex items-center space-x-3">
             <div className="avatar">
               <div className="mask mask-squircle w-12 h-12">
-                <img src={user?.photoURL
-} alt="Avatar Tailwind CSS Component" />
+             <img src={img} alt=""/>
               </div>
             </div>
             <div>

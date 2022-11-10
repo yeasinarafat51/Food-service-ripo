@@ -1,4 +1,9 @@
 # Getting Started with Create React App
+# .Tailwind CSS
+# .DAUSYI
+# .REACT-ICON
+# .REACT-TOASTIFY
+# .LIVE LINK
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
