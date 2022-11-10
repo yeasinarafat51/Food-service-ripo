@@ -66,7 +66,7 @@ const Review = () => {
             <h1>Delete</h1>
           </label>
         </th>
-        <th>Img</th>
+        
         <th>Name</th>
         <th>Price</th>
         <th>Review</th>
