@@ -1,10 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../contexts/authprovider/Authprovider';
+import Usetitle from '../../hooks/Usetitle';
 import Reviewrow from './Reviewrow';
 
 const Review = () => {
     const {user, logout} = useContext(AuthContext)
     const [review, setreview] = useState([])
+    Usetitle('Home')
 
     useEffect(() =>{
         if(!user?.email){

@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/authprovider/Authprovider';
+import Usetitle from '../../../hooks/Usetitle';
 
 const Header = () => {
+    Usetitle('Blog')
     const {user, logout} = useContext(AuthContext);
 
     const handlelogout =() =>{
@@ -28,7 +30,7 @@ const Header = () => {
     
     </>
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-cyan-600">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -38,7 +40,7 @@ const Header = () => {
               {items}
             </ul>
           </div>
-          <Link className="btn btn-ghost normal-case text-xl">daisyUI</Link>
+          <Link className="btn btn-ghost normal-case text-xl">Chicken</Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0">
